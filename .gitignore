@@ -2,7 +2,7 @@ node_modules
 .next
 
 dist
-# next.config.*
-# now.json
+next.config.*
+now.json
 
 .DS_Store
