@@ -45,10 +45,12 @@ function CreateProduct() {
 
   async function handleImageUpload() {
     const data = new FormData();
+
     data.append("file", product.media);
     data.append("upload_preset", "shop-app");
     data.append("cloud_name", "kubaleski");
     const response = await axios.post(process.env.CLOUDINARY_URL, data);
+
     const mediaUrl = response.data.url;
     return mediaUrl;
   }
