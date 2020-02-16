@@ -5,7 +5,6 @@ function CartItemList({ products, user, handleRemoveFromCart }) {
   const router = useRouter();
 
   function mapCartProductsToItems(products) {
-    console.log("products", products);
     return products.map(p => ({
       childKey: p.product._id,
       header: (
