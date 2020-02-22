@@ -64,7 +64,7 @@ Cart.getInitialProps = async ctx => {
   const { token } = parseCookies(ctx);
 
   if (!token) {
-    return { product: [] };
+    return { products: [] };
   }
   // make request only if user is authenticated
   const url = `${baseUrl}/api/cart`;

@@ -6,3 +6,4 @@ next.config.*
 now.json
 
 .DS_Store
+.now

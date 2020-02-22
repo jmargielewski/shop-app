@@ -3,9 +3,9 @@ import jwt from "jsonwebtoken";
 import Cart from "../../models/Cart";
 import connectDb from "../../utils/connectDb";
 
-const { ObjectId } = mongoose.Types;
-
 connectDb();
+
+const { ObjectId } = mongoose.Types;
 
 export default async (req, res) => {
   switch (req.method) {
