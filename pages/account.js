@@ -1,6 +1,7 @@
 import axios from "axios";
 import AccountHeader from "../components/Account/AccountHeader";
 import AccountOrders from "../components/Account/AccountOrders";
+import AccountPermissions from "../components/Account/AccountPermissions";
 import { parseCookies } from "nookies";
 import baseUrl from "../utils/baseUrl";
 
@@ -9,6 +10,7 @@ function Account({ user, orders }) {
     <>
       <AccountHeader {...user} />
       <AccountOrders orders={orders} />
+      {user.role === "root" && <AccountPermissions />}
     </>
   );
 }
