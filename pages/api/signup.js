@@ -52,7 +52,4 @@ export default async (req, res) => {
     console.error(error);
     res.status(500).send("Error signup user. Please try again later.");
   }
-
-  const user = await Product.find();
-  res.status(200).json(products);
 };

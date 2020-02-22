@@ -32,25 +32,25 @@ function AccountOrders({ orders }) {
                 horizontal
                 style={{ marginLeft: "1em" }}
               />
-              <List>
-                {order.products.map(p => (
-                  <List.Item key={p.product._id}>
-                    <Image avatar src={p.product.mediaUrl} />
-                    <List.Content>
-                      <List.Header>{p.product.name}</List.Header>
-                      <List.Description>
-                        {p.quantity} x ${p.product.price}
-                      </List.Description>
-                    </List.Content>
-                    <List.Content floated="right">
-                      <Label tag color="red" size="tiny">
-                        {p.product.sku}
-                      </Label>
-                    </List.Content>
-                  </List.Item>
-                ))}
-              </List>
             </List.Header>
+            <List>
+              {order.products.map(p => (
+                <List.Item key={p.product._id}>
+                  <Image avatar src={p.product.mediaUrl} />
+                  <List.Content>
+                    <List.Header>{p.product.name}</List.Header>
+                    <List.Description>
+                      {p.quantity} x ${p.product.price}
+                    </List.Description>
+                  </List.Content>
+                  <List.Content floated="right">
+                    <Label tag color="red" size="tiny">
+                      {p.product.sku}
+                    </Label>
+                  </List.Content>
+                </List.Item>
+              ))}
+            </List>
           </>
         )
       }
