@@ -39,7 +39,7 @@ async function handleGetRequest(req, res) {
     if (user) {
       res.status(200).json(user);
     } else {
-      res.status(404).json("User not found");
+      res.status(404).send("User not found");
     }
   } catch (error) {
     console.error(error);
